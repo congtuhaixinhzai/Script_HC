@@ -606,5 +606,26 @@
     "desc": "Bật tính năng tách Process cho từng cửa sổ. Giúp chống sập dây chuyền: Nếu 1 thư mục bị đơ, Taskbar và các cửa sổ khác vẫn sống nhăn răng.",
     "type": "cmd",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v SeparateProcess /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Kích hoạt Remote Desktop (RDP)",
+    "desc": "Bật tính năng cho phép máy tính khác điều khiển từ xa.",
+    "type": "cmd",
+    "cmd": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Tắt xác thực bảo mật RDP (NLA)",
+    "desc": "Tắt Network Level Authentication (NLA) để kết nối dễ dàng hơn, tránh lỗi phiên console.",
+    "type": "cmd",
+    "cmd": "reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v UserAuthentication /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🌐 MẠNG & INTERNET",
+    "name": "Mở tường lửa cho RDP",
+    "desc": "Đảm bảo Windows Firewall không chặn đường vào của các máy khác trong mạng.",
+    "type": "cmd",
+    "cmd": "netsh advfirewall firewall set rule group=\"remote desktop\" new enable=Yes"
   }
 ]
