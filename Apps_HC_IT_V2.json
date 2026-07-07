@@ -1,0 +1,671 @@
+[
+  {
+    "group_name": "1. ⌨️ BỘ GÕ & FONT",
+    "apps": [
+      {
+        "id": "LOCAL_FONT_INSTALL",
+        "name": "Cài Font (Full Tiếng Việt)",
+        "type": "custom",
+        "check_path": "%WINDIR%\\Fonts\\VNTIMEB.TTF",
+        "domain": "google.com",
+        "desc": "Tự động cài đặt bộ Font Tiếng Việt đầy đủ (VNI, TCVN3, Unicode) còn thiếu vào hệ thống."
+      },
+      {
+        "id": "Unikey",
+        "name": "Unikey 4.6 RC2",
+        "type": "portable",
+        "url": "https://www.unikey.org/assets/release/unikey46RC2-230919-win64.zip",
+        "exe_in_zip": "UniKeyNT.exe",
+        "kill_process": "UniKeyNT.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\Unikey\\UniKeyNT.exe",
+        "check_name": "unikey",
+        "icon_url": "https://cdn.tgdd.vn/2020/11/GameApp/download-unikey-moi-nhat-200x200-1.jpg",
+        "desc": "Bộ gõ tiếng Việt phổ biến nhất, bản ổn định RC2 chính chủ."
+      },
+      {
+        "id": "EVKey",
+        "name": "EVKey (Thay thế Unikey)",
+        "type": "portable",
+        "url": "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip",
+        "exe_in_zip": "EVKey64.exe",
+        "kill_process": "EVKey64.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\EVKey\\EVKey64.exe",
+        "check_name": "evkey",
+        "domain": "evkeyvn.com",
+        "desc": "Bộ gõ hiện đại, khắc phục lỗi gõ tiếng Việt trên Chrome, Excel và gợi ý từ thông minh."
+      }
+    ]
+  },
+  {
+    "group_name": "2. 📝 VĂN PHÒNG & THIẾT KẾ",
+    "apps": [
+      {
+        "id": "OfficeToolPlus",
+        "name": "Office Tool Plus",
+        "type": "portable",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/OfficeTool.zip",
+        "exe_in_zip": "Office Tool Plus.exe",
+        "auto_run": true,
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\OfficeToolPlus\\Office Tool Plus.exe",
+        "check_name": "office tool plus",
+        "domain": "officetool.plus",
+        "desc": "Công cụ mạnh mẽ hỗ trợ tải, cài đặt tùy chỉnh và quản lý bản quyền Office."
+      },
+      {
+        "id": "Adobe.Acrobat.Reader.64-bit",
+        "name": "Adobe Acrobat Reader",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+        "check_name": "adobe acrobat",
+        "fallback_url": "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2400220687/AcroRdrDC2400220687_en_US.exe",
+        "install_args": "/sAll /rs /msi EULA_ACCEPT=YES",
+        "domain": "adobe.com",
+        "desc": "Phần mềm xem và đọc file PDF tiêu chuẩn toàn cầu, phiên bản miễn phí."
+      },
+      {
+        "id": "Foxit.FoxitReader",
+        "name": "Foxit PDF Reader",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Foxit Software\\Foxit PDF Reader\\FoxitPDFReader.exe",
+        "check_name": "foxit pdf reader",
+        "fallback_url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.1/FoxitPDFReader202611_L10N_Setup_x64.exe",
+        "install_args": "/quiet /norestart",
+        "kill_process": "FoxitReader.exe",
+        "domain": "foxit.com",
+        "desc": "Trình đọc PDF siêu nhẹ, tốc độ mở file nhanh, hỗ trợ tạo chữ ký và ghi chú mạnh mẽ."
+      },
+      {
+        "id": "DrawIO_Direct",
+        "name": "Draw.IO (Vẽ biểu đồ)",
+        "type": "exe_url",
+        "url": "https://github.com/jgraph/drawio-desktop/releases/download/v29.0.3/draw.io-29.0.3-windows-installer.exe",
+        "install_args": "/allusers /S",
+        "check_path": "%ProgramFiles%\\draw.io\\draw.io.exe",
+        "check_name": "draw.io",
+        "domain": "draw.io",
+        "desc": "Công cụ vẽ sơ đồ tư duy, quy trình, biểu đồ luồng (Flowchart) miễn phí offline."
+      },
+      {
+        "id": "Canva.Canva",
+        "name": "Canva PC",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Canva\\Canva.exe",
+        "check_name": "canva",
+        "fallback_url": "https://www.canva.com/download/windows/canva-desktop/",
+        "install_args": "/silent",
+        "domain": "canva.com",
+        "desc": "Ứng dụng thiết kế đồ họa kéo thả: làm slide, poster, ảnh bìa nhanh chóng."
+      }
+
+    ]
+  },
+  {
+    "group_name": "3. 📡 ĐIỀU KHIỂN TỪ XA",
+    "apps": [
+      {
+        "id": "UltraViewer",
+        "name": "UltraViewer",
+        "type": "exe_url",
+        "url": "https://www.ultraviewer.net/vi/UltraViewer_setup_6.6_vi.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "check_path": "%ProgramFiles(x86)%\\UltraViewer\\UltraViewer_Desktop.exe",
+        "check_name": "ultraviewer",
+        "domain": "ultraviewer.net",
+        "desc": "Phần mềm điều khiển máy tính từ xa của Việt Nam, miễn phí và dễ sử dụng."
+      },
+      {
+        "id": "TeamViewer.TeamViewer",
+        "name": "TeamViewer",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\TeamViewer\\TeamViewer.exe",
+        "fallback_url": "https://download.teamviewer.com/download/TeamViewer_Setup_x64.exe",
+        "install_args": "/S",
+        "check_name": "teamviewer",
+        "domain": "teamviewer.com",
+        "desc": "Giải pháp hỗ trợ từ xa chuyên nghiệp, ổn định hàng đầu thế giới."
+      },
+      {
+        "id": "AnyDesk.AnyDesk",
+        "name": "AnyDesk",
+        "type": "exe_url",
+        "url": "https://download.anydesk.com/AnyDesk.exe",
+        "install_args": "--install \"C:\\Program Files (x86)\\AnyDesk\" --start-with-win --silent",
+        "check_path": "%ProgramFiles(x86)%\\AnyDesk\\AnyDesk.exe",
+        "check_name": "anydesk",
+        "domain": "anydesk.com",
+        "desc": "Phần mềm điều khiển từ xa siêu nhẹ, tốc độ cao và độ trễ thấp."
+      },
+      {
+        "id": "RustDesk",
+        "name": "RustDesk",
+        "type": "exe_url",
+        "url": "https://github.com/rustdesk/rustdesk/releases/download/1.4.4/rustdesk-1.4.4-x86_64.exe",
+        "install_args": "--silent-install",
+        "check_path": "%ProgramFiles%\\RustDesk\\RustDesk.exe",
+        "check_name": "rustdesk",
+        "domain": "rustdesk.com",
+        "desc": "Mã nguồn mở thay thế TeamViewer, không bị giới hạn thời gian kết nối."
+      }
+    ]
+  },
+  {
+    "group_name": "4. 🌐 TRÌNH DUYỆT WEB",
+    "apps": [
+      {
+        "id": "Google.Chrome",
+        "name": "Google Chrome",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe",
+        "check_name": "google chrome",
+        "fallback_url": "https://dl.google.com/chrome/install/standalonesetup64.exe",
+        "install_args": "/silent /install",
+        "domain": "google.com",
+        "desc": "Trình duyệt web phổ biến nhất thế giới, đồng bộ dữ liệu Google mạnh mẽ."
+      },
+      {
+        "id": "CocCoc",
+        "name": "Cốc Cốc Browser",
+        "type": "exe_url",
+        "url": "https://files.coccoc.com/browser/coccoc_vi.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\CocCoc\\Browser\\Application\\browser.exe",
+        "check_name": "cốc cốc",
+        "domain": "coccoc.com",
+        "desc": "Trình duyệt Việt, tích hợp tải video, vào Facebook dễ dàng và chặn quảng cáo."
+      },
+      {
+        "id": "CentBrowser",
+        "name": "Cent Browser (Nhẹ & Mượt)",
+        "type": "exe_url",
+        "url": "https://static.centbrowser.com/win_stable/5.2.1168.83/centbrowser_5.2.1168.83_x64.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\CentBrowser\\Application\\chrome.exe",
+        "check_name": "cent browser",
+        "domain": "centbrowser.com",
+        "desc": "Trình duyệt nhân Chromium tối ưu cực nhẹ, nhiều tính năng cử chỉ chuột tiện lợi."
+      },
+      {
+        "id": "Brave.Brave",
+        "name": "Brave Browser",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+        "check_name": "brave",
+        "fallback_url": "https://github.com/brave/brave-browser/releases/latest/download/BraveBrowserStandaloneSetup.exe",
+        "install_args": "/silent /install",
+        "domain": "brave.com",
+        "desc": "Trình duyệt tập trung vào quyền riêng tư, chặn quảng cáo mặc định, tốc độ nhanh."
+      }
+    ]
+  },
+  {
+    "group_name": "5. 💬 CHAT & HỌP ONLINE",
+    "apps": [
+      {
+        "id": "VNG.Zalo",
+        "name": "Zalo PC",
+        "type": "exe_url",
+        "url": "https://zalo.me/download/zalo-pc",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Zalo\\Zalo.exe",
+        "check_name": "zalo",
+        "domain": "zalo.me",
+        "desc": "Ứng dụng chat, gọi điện, gửi file số 1 tại Việt Nam."
+      },
+      {
+        "id": "Microsoft.Teams",
+        "name": "Microsoft Teams",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\Teams\\current\\Teams.exe",
+        "check_name": "microsoft teams",
+        "fallback_url": "https://statics.teams.cdn.office.net/production-windows-x86/lkg/MSTeamsSetup.exe",
+        "install_args": "/s",
+        "icon_url": "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxi87FXbfaqfqVR.HAnzNbchdxTrX6oTHYnKJYGjY.uNRLC1xtHwTCnBNHfwM.TY69WKyCTG.bjYnwWsp6KkJsEM-&format=source",
+        "desc": "Nền tảng làm việc nhóm, họp trực tuyến chuyên nghiệp của hệ sinh thái Microsoft."
+      },
+      {
+        "id": "Viber_Direct",
+        "name": "Viber",
+        "type": "exe_url",
+        "url": "https://download.cdn.viber.com/desktop/windows/ViberSetup.exe",
+        "install_args": "/install",
+        "check_path": "%LOCALAPPDATA%\\Viber\\Viber.exe",
+        "check_name": "viber",
+        "domain": "viber.com",
+        "desc": "Ứng dụng gọi điện, nhắn tin miễn phí, bảo mật đầu cuối."
+      },
+      {
+        "id": "Zoom.Zoom",
+        "name": "Zoom Workplace",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Zoom\\bin\\Zoom.exe",
+        "check_name": "zoom",
+        "fallback_url": "https://zoom.us/client/latest/ZoomInstaller.exe",
+        "install_args": "/silent /install",
+        "domain": "zoom.us",
+        "desc": "Phần mềm họp trực tuyến, học online ổn định và phổ biến nhất."
+      }
+    ]
+  },
+  {
+    "group_name": "6. 🧰 TIỆN ÍCH (NÉN, ẢNH)",
+    "apps": [
+      {
+        "id": "RARLab.WinRAR",
+        "name": "WinRAR (64-bit)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\WinRAR\\WinRAR.exe",
+        "check_name": "winrar",
+        "fallback_url": "https://www.rarlab.com/rar/winrar-x64-701.exe",
+        "install_args": "/S",
+        "domain": "rarlab.com",
+        "desc": "Trình quản lý nén và giải nén file mạnh mẽ nhất, hỗ trợ định dạng RAR/ZIP."
+      },
+      {
+        "id": "7zip.7zip",
+        "name": "7-Zip (64-bit)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\7-Zip\\7z.exe",
+        "check_name": "7-zip",
+        "fallback_url": "https://www.7-zip.org/a/7z2501-x64.exe",
+        "install_args": "/S",
+        "domain": "7-zip.org",
+        "desc": "Trình giải nén miễn phí, mã nguồn mở, cực nhẹ và tỷ lệ nén cao (.7z, .zip)."
+      },
+      {
+        "id": "ShareX.ShareX",
+        "name": "ShareX (Chụp & Quay màn hình)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\ShareX\\ShareX.exe",
+        "check_name": "sharex",
+        "fallback_url": "https://github.com/ShareX/ShareX/releases/download/v18.0.1/ShareX-18.0.1-setup.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "domain": "getsharex.com",
+        "desc": "Công cụ chụp ảnh, quay phim màn hình và chia sẻ file tự động (Mã nguồn mở)."
+      },
+      {
+        "id": "Skillbrains.Lightshot",
+        "name": "Lightshot",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Skillbrains\\lightshot\\Lightshot.exe",
+        "check_name": "lightshot",
+        "fallback_url": "https://app.prntscr.com/build/setup-lightshot.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
+        "domain": "prntscr.com",
+        "desc": "Chụp ảnh màn hình nhanh gọn, hỗ trợ chỉnh sửa và upload lấy link tức thì."
+      },
+      {
+        "id": "NeatDownloadManager",
+        "name": "Neat Download Manager",
+        "type": "exe_url",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/NeatDM_setup.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
+        "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
+        "check_name": "neat download manager",
+        "domain": "neatdownloadmanager.com",
+        "desc": "Trình hỗ trợ download miễn phí, tốc độ cao, thay thế hoàn hảo cho IDM."
+      },
+      {
+        "id": "MemReduct",
+        "name": "Mem Reduct (Dọn RAM)",
+        "type": "exe_url",
+        "url": "https://github.com/henrypp/memreduct/releases/download/v.3.5.2/memreduct-3.5.2-setup.exe",
+        "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART",
+        "check_path": "%ProgramFiles%\\Mem Reduct\\memreduct.exe",
+        "check_name": "memreduct",
+        "domain": "memreduct.org",
+        "desc": "Công cụ nhỏ gọn giúp giải phóng bộ nhớ RAM tức thời, giúp máy mượt hơn."
+      },
+      {
+        "id": "OBSProject.OBSStudio",
+        "name": "OBS Studio",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe",
+        "fallback_url": "https://cdn-fastly.obsproject.com/downloads/OBS-Studio-30.1.2-Full-Installer-x64.exe",
+        "install_args": "/S",
+        "domain": "obsproject.com",
+        "desc": "Phần mềm quay màn hình và livestream chuyên nghiệp, mã nguồn mở miễn phí."
+      }
+    ]
+  },
+  {
+    "group_name": "7. 💻 LẬP TRÌNH & RUNTIME",
+    "apps": [
+      {
+        "id": "VCRedist_AIO",
+        "name": "Visual C++ AIO (2005-2025)",
+        "type": "zip_install",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/Visual-C-Runtimes-All-in-One-Dec-2025.zip",
+        "install_script": "install_all.bat",
+        "install_args": "",
+        "check_path": "%WINDIR%\\System32\\vcruntime140.dll",
+        "check_name": "microsoft visual c++",
+        "domain": "microsoft.com",
+        "desc": "Gói thư viện Visual C++ đầy đủ, sửa lỗi thiếu DLL khi chạy Game và Ứng dụng."
+      },
+      {
+        "id": "Oracle.JavaRuntimeEnvironment",
+        "name": "Java Runtime (JRE 8)",
+        "type": "winget",
+        "check_path": "%ProgramData%\\Oracle\\Java\\javapath\\java.exe",
+        "check_name": "java",
+        "fallback_url": "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=249550_4d245f941845490c91360409ecffb3b4",
+        "install_args": "/s",
+        "domain": "java.com",
+        "desc": "Môi trường chạy ứng dụng Java (Cần thiết cho Kê khai thuế, Minecraft...)."
+      },
+      {
+        "id": "Microsoft.DotNet.DesktopRuntime.8",
+        "name": ".NET Desktop Runtime 8.0",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\8.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "check_name": "windows desktop runtime",
+        "fallback_url": "https://aka.ms/dotnet/8.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart",
+        "domain": "dotnet.microsoft.com",
+        "desc": "Thư viện nền tảng để chạy các ứng dụng được viết bằng .NET 8.0 mới nhất."
+      },
+      {
+        "id": "Microsoft.VisualStudioCode",
+        "name": "Visual Studio Code",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Microsoft VS Code\\Code.exe",
+        "check_name": "microsoft visual studio code",
+        "fallback_url": "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user",
+        "install_args": "/verysilent /mergetasks=!runcode",
+        "domain": "code.visualstudio.com",
+        "desc": "Trình soạn thảo Code nhẹ, mạnh mẽ, hỗ trợ nhiều Extension cho lập trình viên."
+      }
+    ]
+  },
+  {
+    "group_name": "8. 🗄️ CƠ SỞ DỮ LIỆU (DB)",
+    "apps": [
+      {
+        "id": "Microsoft.SQLServer.2022.Express",
+        "name": "SQL Server 2022 Express",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Microsoft SQL Server\\MSSQL16.SQLEXPRESS\\MSSQL\\Binn\\sqlservr.exe",
+        "check_name": "microsoft sql server 2022",
+        "fallback_url": "https://go.microsoft.com/fwlink/p/?linkid=2215158",
+        "install_args": "/Q /IAcceptSqlServerLicenseTerms /Action=Install /Features=SQLEngine /InstanceName=SQLEXPRESS",
+        "domain": "microsoft.com",
+        "desc": "Hệ quản trị cơ sở dữ liệu SQL Server phiên bản miễn phí, nhẹ dành cho máy cá nhân."
+      },
+      {
+        "id": "Microsoft.SQLServerManagementStudio",
+        "name": "SSMS (Quản lý SQL)",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\Microsoft SQL Server Management Studio 19\\Common7\\IDE\\Ssms.exe",
+        "check_name": "microsoft sql server management studio",
+        "fallback_url": "https://aka.ms/ssmsfullsetup",
+        "install_args": "/Quiet /NoRestart",
+        "domain": "microsoft.com",
+        "desc": "Công cụ quản trị giao diện (GUI) chính chủ cho SQL Server."
+      },
+      {
+        "id": "dbeaver.dbeaver",
+        "name": "DBeaver Community",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\DBeaver\\dbeaver.exe",
+        "check_name": "dbeaver community",
+        "fallback_url": "https://dbeaver.io/files/dbeaver-ce-latest-x86_64-setup.exe",
+        "install_args": "/S",
+        "domain": "dbeaver.io",
+        "desc": "Trình quản lý CSDL đa năng (MySQL, PostgreSQL, SQL Server...) miễn phí."
+      }
+    ]
+  },
+  {
+    "group_name": "9. 🎮 THƯ VIỆN GAME",
+    "apps": [
+      {
+        "id": "DirectX_June2010",
+        "name": "DirectX",
+        "type": "zip_install",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/DirectX_June2010_Silent.zip",
+        "install_script": "DXSETUP.exe",
+        "install_args": "/silent",
+        "check_path": "%WINDIR%\\System32\\d3dx9_43.dll",
+        "desc": "Bản Offline đầy đủ nhất, fix mọi lỗi thiếu DLL khi chơi game cũ.",
+        "domain": "microsoft.com"
+      },
+      {
+        "id": "Nvidia.PhysX",
+        "name": "NVIDIA PhysX System",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\NVIDIA Corporation\\PhysX\\Common\\PhysX_64.dll",
+        "check_name": "nvidia physx",
+        "fallback_url": "https://us.download.nvidia.com/Windows/9.23.1019/PhysX_9.23.1019_SystemSoftware.exe",
+        "install_args": "/quiet /norestart",
+        "domain": "nvidia.com",
+        "desc": "Công cụ hỗ trợ xử lý vật lý trong game, cần thiết cho các máy dùng card NVIDIA."
+      },
+      {
+        "id": "OpenAL",
+        "name": "OpenAL (Audio Game)",
+        "type": "portable",
+        "url": "https://openal.org/downloads/oalinst.zip",
+        "exe_in_zip": "oalinst.exe",
+        "auto_run": true,
+        "check_path": "%WINDIR%\\System32\\OpenAL32.dll",
+        "icon_url": "https://img.utdstc.com/icon/b93/78a/b9378a80bdac44d23fd6731f109dc00bb67476cf54c0cb8e9b51732a382edb08:200",
+        "desc": "Thư viện âm thanh 3D đa nền tảng, sửa lỗi mất tiếng trong một số game cũ."
+      }
+    ]
+  },
+  {
+    "group_name": "10. 🎬 MEDIA & GIẢI TRÍ",
+    "apps": [
+      {
+        "id": "VideoLAN.VLC",
+        "name": "VLC Media Player",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\VideoLAN\\VLC\\vlc.exe",
+        "check_name": "vlc media player",
+        "fallback_url": "https://get.videolan.org/vlc/last/win64/vlc-3.0.21-win64.exe",
+        "install_args": "/S",
+        "domain": "videolan.org",
+        "desc": "Trình phát video/audio đa định dạng, miễn phí, không cần codec riêng."
+      },
+      {
+        "id": "Spotify.Spotify",
+        "name": "Spotify",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Spotify\\Spotify.exe",
+        "check_name": "spotify",
+        "fallback_url": "https://download.scdn.co/SpotifySetup.exe",
+        "install_args": "/silent",
+        "domain": "spotify.com",
+        "desc": "Nghe nhạc streaming phổ biến nhất thế giới."
+      }
+    ]
+  },
+  {
+    "group_name": "11. 🔧 IT PRO & TÌM KIẾM",
+    "apps": [
+      {
+        "id": "voidtools.Everything",
+        "name": "Everything (Tìm file)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Everything\\Everything.exe",
+        "check_name": "everything",
+        "fallback_url": "https://www.voidtools.com/Everything-1.5.0.1397.x64-Setup.exe",
+        "install_args": "/S",
+        "domain": "voidtools.com",
+        "desc": "Tìm file/folder trên ổ cứng cực nhanh — công cụ không thể thiếu của IT."
+      },
+      {
+        "id": "Notepad++.Notepad++",
+        "name": "Notepad++",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Notepad++\\notepad++.exe",
+        "check_name": "notepad++",
+        "fallback_url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.7.7/npp.8.7.7.Installer.x64.exe",
+        "install_args": "/S",
+        "domain": "notepad-plus-plus.org",
+        "desc": "Soạn thảo văn bản/code nhẹ, hỗ trợ plugin mạnh."
+      },
+      {
+        "id": "PuTTY.PuTTY",
+        "name": "PuTTY (SSH/Telnet)",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\PuTTY\\putty.exe",
+        "check_name": "putty",
+        "domain": "putty.org",
+        "desc": "Client SSH/Telnet chuẩn cho quản trị server và thiết bị mạng."
+      },
+      {
+        "id": "WinSCP.WinSCP",
+        "name": "WinSCP (SFTP/FTP)",
+        "type": "winget",
+        "check_path": "%ProgramFiles(x86)%\\WinSCP\\WinSCP.exe",
+        "check_name": "winscp",
+        "fallback_url": "https://winscp.net/download/files/6.3.7/WinSCP-6.3.7-Setup.exe",
+        "install_args": "/SILENT",
+        "domain": "winscp.net",
+        "desc": "Truyền file qua SFTP/FTP/SCP — đôi cánh với PuTTY."
+      },
+      {
+        "id": "Git.Git",
+        "name": "Git for Windows",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Git\\bin\\git.exe",
+        "check_name": "git",
+        "fallback_url": "https://github.com/git-for-windows/git/releases/download/v2.47.1.windows.2/Git-2.47.1.2-64-bit.exe",
+        "install_args": "/VERYSILENT /NORESTART",
+        "domain": "git-scm.com",
+        "desc": "Hệ thống quản lý mã nguồn — cần cho dev và nhiều công cụ hiện đại."
+      }
+    ]
+  },
+  {
+    "group_name": "12. 🖥️ PHẦN CỨNG & Ổ ĐĨA",
+    "apps": [
+      {
+        "id": "CPUID.CPU-Z",
+        "name": "CPU-Z",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\CPUID\\CPU-Z\\cpuz.exe",
+        "check_name": "cpu-z",
+        "domain": "cpuid.com",
+        "desc": "Xem chi tiết CPU, mainboard, RAM — chuẩn khi mua/bán máy."
+      },
+      {
+        "id": "REALiX.HWiNFO",
+        "name": "HWiNFO64",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\HWiNFO64\\HWiNFO64.exe",
+        "check_name": "hwinfo",
+        "domain": "hwinfo.com",
+        "desc": "Giám sát phần cứng chi tiết: nhiệt, volt, tốc độ quạt, SMART."
+      },
+      {
+        "id": "CrystalDewWorld.CrystalDiskInfo",
+        "name": "CrystalDiskInfo",
+        "type": "winget",
+        "install_args": "/VERYSILENT /NORESTART /MERGETASKS=!desktopicon64",
+        "kill_process": "DiskInfo64.exe",
+        "check_path": "%ProgramFiles%\\CrystalDiskInfo\\DiskInfo64.exe",
+        "check_name": "crystaldiskinfo",
+        "domain": "crystalmark.info",
+        "desc": "Đọc SMART ổ cứng/SSD — cảnh báo sớm khi ổ sắp hỏng."
+      },
+      {
+        "id": "TechPowerUp.GPU-Z",
+        "name": "GPU-Z",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\GPU-Z\\GPU-Z.exe",
+        "check_name": "gpu-z",
+        "domain": "techpowerup.com",
+        "desc": "Thông tin card đồ họa, driver, xung nhịp — chuẩn cho game/đồ họa."
+      },
+      {
+        "id": "ThrottleStop",
+        "name": "ThrottleStop",
+        "type": "portable",
+        "url": "https://uk2-dl.techpowerup.com/files/ThrottleStop_9.7.zip",
+        "exe_in_zip": "ThrottleStop.exe",
+        "kill_process": "ThrottleStop.exe",
+        "check_path": "%ProgramFiles%\\TuLamIT Apps\\ThrottleStop\\ThrottleStop.exe",
+        "check_name": "throttlestop",
+        "domain": "techpowerup.com",
+        "desc": "Giám sát & giảm CPU throttling trên laptop — đôi cánh với GPU-Z, cần quyền Admin."
+      }
+    ]
+  },
+  {
+    "group_name": "13. ☁️ CLOUD & CHAT THÊM",
+    "apps": [
+      {
+        "id": "Telegram.TelegramDesktop",
+        "name": "Telegram Desktop",
+        "type": "winget",
+        "check_path": "%APPDATA%\\Telegram Desktop\\Telegram.exe",
+        "check_name": "telegram",
+        "domain": "telegram.org",
+        "desc": "Nhắn tin, gọi video, nhóm lớn — phổ biến trong cộng đồng IT."
+      },
+      {
+        "id": "Discord.Discord",
+        "name": "Discord",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Discord\\Update.exe",
+        "check_name": "discord",
+        "domain": "discord.com",
+        "desc": "Chat voice/text cho game, học online và làm việc nhóm."
+      },
+      {
+        "id": "Microsoft.OneDrive",
+        "name": "Microsoft OneDrive",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Microsoft\\OneDrive\\OneDrive.exe",
+        "check_name": "microsoft onedrive",
+        "domain": "microsoft.com",
+        "desc": "Đồng bộ file lên cloud Microsoft — tích hợp Office."
+      },
+      {
+        "id": "Google.GoogleDrive",
+        "name": "Google Drive",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\Google\\Drive File Stream\\launch.bat",
+        "check_name": "google drive",
+        "domain": "google.com",
+        "desc": "Đồng bộ Google Drive trên máy tính."
+      }
+    ]
+  },
+  {
+    "group_name": "14. ⚙️ RUNTIME BỔ SUNG",
+    "apps": [
+      {
+        "id": "Microsoft.DotNet.DesktopRuntime.9",
+        "name": ".NET Desktop Runtime 9",
+        "type": "winget",
+        "check_name": "windows desktop runtime 9",
+        "check_path": "%ProgramFiles%\\dotnet\\shared\\Microsoft.WindowsDesktop.App\\9.0.0\\Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "fallback_url": "https://aka.ms/dotnet/9.0/windowsdesktop-runtime-win-x64.exe",
+        "install_args": "/install /quiet /norestart",
+        "domain": "dotnet.microsoft.com",
+        "desc": "Runtime .NET 9 cho ứng dụng mới nhất."
+      },
+      {
+        "id": "Python.Python.3.12",
+        "name": "Python 3.12",
+        "type": "winget",
+        "check_path": "%LOCALAPPDATA%\\Programs\\Python\\Python312\\python.exe",
+        "check_name": "python 3.12",
+        "domain": "python.org",
+        "desc": "Ngôn ngữ lập trình phổ biến — automation, AI, web."
+      },
+      {
+        "id": "OpenJS.NodeJS.LTS",
+        "name": "Node.js LTS",
+        "type": "winget",
+        "check_path": "%ProgramFiles%\\nodejs\\node.exe",
+        "check_name": "node.js",
+        "domain": "nodejs.org",
+        "desc": "Runtime JavaScript — cần cho nhiều công cụ dev hiện đại."
+      }
+    ]
+  }
+]
