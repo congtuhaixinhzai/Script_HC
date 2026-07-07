@@ -627,5 +627,40 @@
     "desc": "Đảm bảo Windows Firewall không chặn đường vào của các máy khác trong mạng.",
     "type": "cmd",
     "cmd": "netsh advfirewall firewall set rule group=\"remote desktop\" new enable=Yes"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable Windows Recovery",
+    "desc": "Ép Windows luôn boot thẳng, bỏ qua màn hình xanh Recovery khi tắt đột ngột/mất điện.",
+    "type": "cmd",
+    "cmd": "bcdedit /set {default} bootstatuspolicy ignoreallfailures & bcdedit /set {default} recoveryenabled No"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable IE Enhanced Security (IE ESC)",
+    "desc": "Tắt thông báo bảo mật phiền phức của Internet Explorer (Thường gặp trên Windows Server).",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Active Setup\\Installed Components\\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}\" /v IsInstalled /t REG_DWORD /d 00000000 /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Show All Tray Icons",
+    "desc": "Luôn hiển thị tất cả các icon của các phần mềm đang chạy ngầm ra ngoài Taskbar Tray.",
+    "type": "cmd",
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v EnableAutoTray /t REG_DWORD /d 0 /f"
+  },
+  {
+    "category": "🚀 TỐI ƯU HỆ THỐNG",
+    "name": "Taskbar Small Icons",
+    "desc": "Thu nhỏ thanh Taskbar và các icon để có thêm không gian làm việc trên màn hình.",
+    "type": "cmd",
+    "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced\" /v TaskbarSmallIcons /t REG_DWORD /d 1 /f"
+  },
+  {
+    "category": "⚠️ NÂNG CAO",
+    "name": "Disable Sleep",
+    "desc": "Tắt chế độ tự động Ngủ (Sleep) khi cắm sạc, ngăn chặn rớt mạng do máy ngủ.",
+    "type": "cmd",
+    "cmd": "powercfg /x -standby-timeout-ac 0"
   }
 ]
