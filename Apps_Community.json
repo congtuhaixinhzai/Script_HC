@@ -21,7 +21,7 @@
         "name": "EVKey (Thay thế Unikey)",
         "type": "portable",
         "id": "EVKey",
-        "url": "https://raw.githubusercontent.com/thucvt/fonts/main/EVKey.zip",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/EVKey.zip",
         "exe_in_zip": "EVKey64.exe",
         "kill_process": "EVKey64.exe",
         "check_path": "%ProgramFiles%\\EVKey\\EVKey64.exe"
@@ -43,7 +43,7 @@
         "name": "Office Tool Plus",
         "type": "portable",
         "id": "OfficeToolPlus",
-        "url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/OfficeTool.zip",
+        "url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/OfficeTool.zip",
         "exe_in_zip": "Office Tool Plus.exe",
         "auto_run": true,
         "desc": "Công cụ tải, cài đặt chính hãng Microsoft",
@@ -235,7 +235,7 @@
     "type": "winget", 
     "id": "Jaryaa.NeatDownloadManager", 
     "check_path": "%ProgramFiles(x86)%\\Neat Download Manager\\NeatDM.exe",
-    "fallback_url": "https://raw.githubusercontent.com/thucvt/Script_DVHT/main/NeatDM_setup.exe",
+    "fallback_url": "https://raw.githubusercontent.com/congtuhaixinhzai/Script_HC/main/NeatDM_setup.exe",
     "install_args": "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART" 
     },
     { 

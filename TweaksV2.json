@@ -7,25 +7,25 @@
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Super Optimize For Win 10/11 (ThucIT)",
+    "name": "Super Optimize For Win 10/11 (HC_IT)",
     "desc": "Tối ưu startup type hàng trăm Windows service. Một số service không có trên bản Win của bạn sẽ tự bỏ qua.",
-    "cmd": "RUN_ThucIT_SERVICES"
+    "cmd": "RUN_HC_IT_SERVICES"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Enable Boot Optimize (By ThucIT)",
+    "name": "Enable Boot Optimize (By Hải Chíp_IT)",
     "desc": "Sắp xếp file khởi động liền mạch (Giúp ổ SSD & HDD boot nhanh hơn)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"Enable\" /t REG_SZ /d \"Yes\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"BootOptimizeFunction\" /t REG_SZ /d \"Yes\" /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Speed Up Windows Response (By ThucIT)",
+    "name": "Speed Up Windows Response (By Hải Chíp_IT)",
     "desc": "Giảm độ trễ Menu, Tự đóng App treo, Tắt máy cực nhanh (WaitToKill set 2000ms an toàn)",
     "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v \"AutoEndTasks\" /t REG_SZ /d \"1\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"100\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"HungAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"WaitToKillAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"LowLevelHooksTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\" /v \"WaitToKillServiceTimeout\" /t REG_SZ /d \"2000\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v \"EnableQuickReboot\" /t REG_SZ /d \"1\" /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Explorer Stability & Tweaks (By ThucIT)",
+    "name": "Explorer Stability & Tweaks (By Hải Chíp_IT)",
     "desc": "Chạy Explorer tiến trình riêng (Chống Crash toàn bộ), Tắt check Shortcut/Disk Space/Internet Search",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Advanced\" /v \"SeparateProcess\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v \"StartupDelayInMSec\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoLowDiskSpaceChecks\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"LinkResolveIgnoreLinkInfo\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveSearch\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveTrack\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoInternetOpenWith\" /t REG_DWORD /d 1 /f"
   },
@@ -50,7 +50,7 @@
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Set Time to UTC",
-    "desc": "Fix lỗi lệch giờ Windows/macOS",
+    "desc": "Fix lỗi lệch giờ khi dual-boot macOS/Linux. ⚠️ KHÔNG bật nếu dùng giờ VN UTC+7.",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation\" /v \"RealTimeIsUniversal\" /t REG_DWORD /d 1 /f"
   },
   {
@@ -168,7 +168,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Optimize RAM (Disable SysMain)",
     "desc": "Tắt dịch vụ SysMain (Superfetch) để giảm tải Disk/RAM không cần thiết",
-    "cmd": "sc config SysMain start= disabled; sc stop SysMain"
+    "cmd": "Set-Service -Name SysMain -StartupType Disabled; Stop-Service -Name SysMain -Force -ErrorAction SilentlyContinue"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -204,7 +204,7 @@
     "category": "🚀 TỐI ƯU HỆ THỐNG",
     "name": "Disable Telemetry",
     "desc": "Chặn Microsoft thu thập dữ liệu chẩn đoán và tắt DiagTrack Service",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; sc config DiagTrack start= disabled; sc stop DiagTrack"
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection\" /v AllowTelemetry /t REG_DWORD /d 0 /f; Set-Service -Name DiagTrack -StartupType Disabled; Stop-Service -Name DiagTrack -Force -ErrorAction SilentlyContinue"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
@@ -273,7 +273,7 @@
     "name": "Optimize Network TCP/IP (Gaming/Latency)",
     "desc": "Giảm độ trễ mạng (Ping), Tối ưu TCP NoDelay (Giúp phản hồi game/thao tác remote desktop nhanh hơn)",
     "type": "cmd",
-    "cmd": "cmd /c \"for /f \"tokens=*\" %a in ('reg query HKLM\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces /s /f \"{*}\" /k ^| findstr HKEY') do (reg add \"%a\" /v TcpAckFrequency /t REG_DWORD /d 1 /f & reg add \"%a\" /v TCPNoDelay /t REG_DWORD /d 1 /f & reg add \"%a\" /v TcpDelAckTicks /t REG_DWORD /d 0 /f) & netsh int tcp set global autotuninglevel=normal & netsh int tcp set global rss=enabled & netsh int tcp set heuristics disabled\""
+    "cmd": "Get-ChildItem 'HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces' | ForEach-Object { Set-ItemProperty -Path $_.PSPath -Name TcpAckFrequency -Type DWord -Value 1 -Force -ErrorAction SilentlyContinue; Set-ItemProperty -Path $_.PSPath -Name TCPNoDelay -Type DWord -Value 1 -Force -ErrorAction SilentlyContinue; Set-ItemProperty -Path $_.PSPath -Name TcpDelAckTicks -Type DWord -Value 0 -Force -ErrorAction SilentlyContinue }; netsh int tcp set global autotuninglevel=normal; netsh int tcp set global rss=enabled; netsh int tcp set heuristics disabled"
   },
   {
     "category": "🌐 MẠNG & INTERNET",
@@ -301,14 +301,14 @@
     "name": "Quick System Clean",
     "desc": "Dọn dẹp File tạm (Temp), Prefetch, File Log, Empty Recycle Bin (An toàn - Nhanh)",
     "type": "cmd",
-    "cmd": "cmd /c \"del /f /s /q \"%TEMP%\\*\" & rd /s /q \"%TEMP%\" & del /f /s /q \"%windir%\\Temp\\*\" & del /f /s /q \"%windir%\\Prefetch\\*.*\" & wevtutil cl Application & wevtutil cl System & PowerShell -Command \"Clear-RecycleBin -Force -ErrorAction SilentlyContinue\"\""
+    "cmd": "Remove-Item -Path \"$env:TEMP\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path \"$env:windir\\Temp\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path \"$env:windir\\Prefetch\\*\" -Force -ErrorAction SilentlyContinue; wevtutil cl Application; wevtutil cl System; Clear-RecycleBin -Force -ErrorAction SilentlyContinue"
   },
   {
     "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Rebuild Icon Cache",
     "desc": "Xóa và tạo lại bộ nhớ đệm Icon (Sửa lỗi icon bị trắng/lỗi hình)",
     "type": "cmd",
-    "cmd": "cmd /c \"taskkill /f /im explorer.exe & del /f /q \"%localappdata%\\IconCache.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\iconcache_*.db\" & del /f /q \"%localappdata%\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" & start explorer.exe\""
+    "cmd": "Stop-Process -Name explorer -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\IconCache.db\" -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Explorer\\iconcache_*.db\" -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Explorer\\thumbcache_*.db\" -Force -ErrorAction SilentlyContinue; Start-Process explorer.exe"
   },
   {
     "category": "🛠️ SỬA LỖI & DỌN DẸP",
@@ -322,14 +322,14 @@
     "name": "Reset Windows Update & Clean Cache",
     "desc": "Dừng dịch vụ Update, xóa cache tải về bị lỗi và khởi động lại (Sửa lỗi không update được)",
     "type": "cmd",
-    "cmd": "cmd /c \"net stop wuauserv & net stop cryptSvc & net stop bits & net stop msiserver & rd /s /q \"%windir%\\SoftwareDistribution\\Download\" & md \"%windir%\\SoftwareDistribution\\Download\" & net start wuauserv & net start bits & net start cryptSvc & net start msiserver\""
+    "cmd": "Stop-Service wuauserv,bits,cryptSvc,msiserver -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:windir\\SoftwareDistribution\\Download\\*\" -Recurse -Force -ErrorAction SilentlyContinue; New-Item -ItemType Directory -Path \"$env:windir\\SoftwareDistribution\\Download\" -Force | Out-Null; Start-Service wuauserv,bits,cryptSvc,msiserver -ErrorAction SilentlyContinue"
   },
   {
     "category": "🛠️ SỬA LỖI & DỌN DẸP",
     "name": "Clean Browser Cache (Chrome/Edge)",
     "desc": "Xóa bộ nhớ đệm trình duyệt (Giữ lại Cookie & Lịch sử đăng nhập)",
     "type": "cmd",
-    "cmd": "cmd /c \"del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" & del /f /s /q \"%localappdata%\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\"\""
+    "cmd": "Remove-Item \"$env:LOCALAPPDATA\\Google\\Chrome\\User Data\\Default\\Cache\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\Google\\Chrome\\User Data\\Default\\GPUCache\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Edge\\User Data\\Default\\Cache\\*\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:LOCALAPPDATA\\Microsoft\\Edge\\User Data\\Default\\GPUCache\\*\" -Recurse -Force -ErrorAction SilentlyContinue"
   },
   {
     "category": "⚠️ NÂNG CAO",
@@ -358,7 +358,7 @@
   },
   {
     "category": "⚠️ NÂNG CAO",
-    "name": "Optimize Memory Strategy (By ThucIT)",
+    "name": "Optimize Memory Strategy (By Hải Chíp_IT)",
     "desc": "Ép nhân hệ thống chạy trên RAM (DisablePagingExecutive), Tăng System Cache, Tự nhả DLL thừa",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"DisablePagingExecutive\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d 2 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"LargeSystemCache\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"AlwaysUnloadDLL\" /t REG_DWORD /d 1 /f"
   },
@@ -448,7 +448,7 @@
     "name": "Firefox: Enterprise Hardening",
     "desc": "Tối ưu Firefox: Tắt Pocket/Sync/Telemetry, Chặn theo dõi, Tắt Disk Cache, Ram Nghèo Không Dùng",
     "type": "cmd",
-    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxAccounts /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisablePocket /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxStudies /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableBuiltinPDFViewer /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v URL /t REG_SZ /d \"https://google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v StartPage /t REG_SZ /d \"homepage\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v Locked /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v SponsoredTopSites /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v Pocket /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"browser.cache.disk.enable\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"geo.enabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Permissions\\Location\" /v BlockNewRequests /t REG_DWORD /d 1 /f"
+    "cmd": "reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableTelemetry /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxAccounts /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisablePocket /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableFirefoxStudies /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\" /v DisableBuiltinPDFViewer /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v URL /t REG_SZ /d \"https://google.com\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v StartPage /t REG_SZ /d \"homepage\" /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Homepage\" /v Locked /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v SponsoredTopSites /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\FirefoxHome\" /v Pocket /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"browser.cache.disk.enable\" /t REG_DWORD /d 1 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Preferences\" /v \"geo.enabled\" /t REG_DWORD /d 0 /f & reg add \"HKLM\\SOFTWARE\\Policies\\Mozilla\\Firefox\\Permissions\\Location\" /v BlockNewRequests /t REG_DWORD /d 1 /f"
   },
   {
     "category": "💾 CÀI ĐẶT BỔ SUNG",
@@ -499,9 +499,9 @@
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
-    "name": "Branding: TỰ LÀM IT Signature",
+    "name": "Branding: HẢI CHÍP IT Signature",
     "desc": "Ghi thông tin hỗ trợ OEM (SĐT/FB) — không ghi dòng Model dưới tên máy trong Settings.",
-    "cmd": "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /f 2>nul & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"TỰ LÀM IT\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://www.facebook.com/trongthuc.vuong\" /f & reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"TỰ LÀM IT\" /f"
+    "cmd": "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"HẢI CHÍP IT\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://avatar2.site/\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"HẢI CHÍP IT\" /f"
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
@@ -591,14 +591,14 @@
     "name": "Restart File Explorer (Nhanh)",
     "desc": "Khởi động lại ngay lập tức Windows Explorer khi bị đơ Taskbar hoặc treo thư mục (Không làm mất dữ liệu đang làm).",
     "type": "cmd",
-    "cmd": "taskkill /f /im explorer.exe & start explorer.exe"
+    "cmd": "Stop-Process -Name explorer -Force -ErrorAction SilentlyContinue; Start-Process explorer.exe"
   },
   {
     "category": "🛠️ Explorer",
     "name": "Fix Explorer Freeze (Clear Cache)",
     "desc": "Sửa lỗi đơ cứng khi mở This PC. Xóa sạch rác trong bộ nhớ tạm của Quick Access và Recent Files (Thủ phạm chính).",
     "type": "cmd",
-    "cmd": "del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\*\" & del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\AutomaticDestinations\\*\" & del /F /Q \"%APPDATA%\\Microsoft\\Windows\\Recent\\CustomDestinations\\*\" & taskkill /f /im explorer.exe & start explorer.exe"
+    "cmd": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Recent\\*\" -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Recent\\AutomaticDestinations\\*\" -Force -ErrorAction SilentlyContinue; Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Recent\\CustomDestinations\\*\" -Force -ErrorAction SilentlyContinue; Stop-Process -Name explorer -Force -ErrorAction SilentlyContinue; Start-Process explorer.exe"
   },
   {
     "category": "🛠️ Explorer",
