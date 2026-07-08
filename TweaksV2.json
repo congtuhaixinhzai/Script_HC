@@ -13,19 +13,19 @@
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Enable Boot Optimize (By Hải Chíp_IT)",
+    "name": "Enable Boot Optimize (By HC_IT)",
     "desc": "Sắp xếp file khởi động liền mạch (Giúp ổ SSD & HDD boot nhanh hơn)",
     "cmd": "reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"Enable\" /t REG_SZ /d \"Yes\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Dfrg\\BootOptimizeFunction\" /v \"BootOptimizeFunction\" /t REG_SZ /d \"Yes\" /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Speed Up Windows Response (By Hải Chíp_IT)",
+    "name": "Speed Up Windows Response (By HC_IT)",
     "desc": "Giảm độ trễ Menu, Tự đóng App treo, Tắt máy cực nhanh (WaitToKill set 2000ms an toàn)",
     "cmd": "reg add \"HKCU\\Control Panel\\Desktop\" /v \"AutoEndTasks\" /t REG_SZ /d \"1\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"MenuShowDelay\" /t REG_SZ /d \"100\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"HungAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"WaitToKillAppTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKCU\\Control Panel\\Desktop\" /v \"LowLevelHooksTimeout\" /t REG_SZ /d \"1000\" /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\" /v \"WaitToKillServiceTimeout\" /t REG_SZ /d \"2000\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\" /v \"EnableQuickReboot\" /t REG_SZ /d \"1\" /f"
   },
   {
     "category": "🚀 TỐI ƯU HỆ THỐNG",
-    "name": "Explorer Stability & Tweaks (By Hải Chíp_IT)",
+    "name": "Explorer Stability & Tweaks (By HC_IT)",
     "desc": "Chạy Explorer tiến trình riêng (Chống Crash toàn bộ), Tắt check Shortcut/Disk Space/Internet Search",
     "cmd": "reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Advanced\" /v \"SeparateProcess\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Serialize\" /v \"StartupDelayInMSec\" /t REG_DWORD /d 0 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoLowDiskSpaceChecks\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"LinkResolveIgnoreLinkInfo\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveSearch\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoResolveTrack\" /t REG_DWORD /d 1 /f; reg add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\" /v \"NoInternetOpenWith\" /t REG_DWORD /d 1 /f"
   },
@@ -358,7 +358,7 @@
   },
   {
     "category": "⚠️ NÂNG CAO",
-    "name": "Optimize Memory Strategy (By Hải Chíp_IT)",
+    "name": "Optimize Memory Strategy (By HC_IT)",
     "desc": "Ép nhân hệ thống chạy trên RAM (DisablePagingExecutive), Tăng System Cache, Tự nhả DLL thừa",
     "cmd": "reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"DisablePagingExecutive\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters\" /v \"EnablePrefetcher\" /t REG_DWORD /d 2 /f; reg add \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\" /v \"LargeSystemCache\" /t REG_DWORD /d 1 /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\" /v \"AlwaysUnloadDLL\" /t REG_DWORD /d 1 /f"
   },
@@ -499,9 +499,9 @@
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
-    "name": "Branding: HẢI CHÍP IT Signature",
+    "name": "Branding: HC IT Signature",
     "desc": "Ghi thông tin hỗ trợ OEM (SĐT/FB) — không ghi dòng Model dưới tên máy trong Settings.",
-    "cmd": "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"HẢI CHÍP IT\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://avatar2.site/\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"HẢI CHÍP IT\" /f"
+    "cmd": "reg delete \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v Model /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"Manufacturer\" /t REG_SZ /d \"HC IT\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportPhone\" /t REG_SZ /d \"0705558789\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportHours\" /t REG_SZ /d \"24/7 Support\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\OEMInformation\" /v \"SupportUrl\" /t REG_SZ /d \"https://avatar2.site/\" /f; reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\" /v \"RegisteredOrganization\" /t REG_SZ /d \"HC IT\" /f"
   },
   {
     "category": "👑 BẢN QUYỀN & THÔNG TIN",
